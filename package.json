@@ -1,21 +1,26 @@
 {
-  "name": "crud-api-rs",
+  "name": "crud-api",
   "version": "1.0.0",
-  "description": "��#\u0000 \u0000c\u0000r\u0000u\u0000d\u0000-\u0000a\u0000p\u0000i\u0000-\u0000r\u0000s\u0000\r\u0000 \u0000",
-  "main": "index.js",
+  "description": "project to rs-school",
+  "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ts-node index.ts",
+    "test": "jest",
+    "start:dev": "nodemon src/index.ts",
+    "build": "tsc",
+    "start:prod": "npm run build && node dist/index.js",
+    "start:multi": "ts-node index.ts"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "cross-env": "^7.0.3",
+  "dependencies": {
+    "@types/node": "^20.11.16",
     "dotenv": "^16.4.1",
     "eslint": "^8.56.0",
+    "eslint-plugin-typescript": "^0.14.0",
     "nodemon": "^3.0.3",
+    "prettier": "^3.2.5",
     "ts-node": "^10.9.2",
-    "ts-node-dev": "^2.0.0",
     "typescript": "^5.3.3"
   }
 }
