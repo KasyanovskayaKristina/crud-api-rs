@@ -5,7 +5,11 @@
   "main": "src/index.ts",
   "scripts": {
     "start:dev": "nodemon src/index.ts",
-    "lint": "eslint {src,test}/**/*.ts --fix"
+    "lint": "eslint {src,test}/**/*.ts --fix",
+    "start:worker": "cross-env ts-node src/index.ts",
+    "start:prod": "webpack && node ./dist/bundle.js",
+    "start:multi": "cross-env NODE_APP_INSTANCE=0 ts-node src/loadBalancer.ts",
+    "test": "cross-env TEST=test jest"
   },
   "keywords": [],
   "license": "ISC",
